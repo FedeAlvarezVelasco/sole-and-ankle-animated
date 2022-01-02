@@ -90,16 +90,20 @@ const Image = styled.img`
   display: block;
   width: 100%;
   transfrom-origin: 50% 75%;
-  transition: transform 600ms;
-  will-change: transform;
-
-  @media (hover: hover) and (prefers-reduce-motion: no-preference) {
-  ${Link}:hover &,
-  ${Link}:focus & {
-    transform: scale(1.1);
-    transition: transform 200ms;
+  transition: 
+    transform 600ms,
+    filter 1000ms;
+    will-change: transform;
+    filter: brightness(80%);
+    
+    ${Link}:hover &,
+    ${Link}:focus & {
+      transform: scale(1.1);
+      transition: 
+      transform 200ms;
+      filter 400ms;
+    filter: brightness(100%);
   }
-}
 `;
 
 const Row = styled.div`
